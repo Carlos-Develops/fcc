@@ -1,14 +1,15 @@
-h1, h2, h3, p, ol, ul, li, a, label {
+/*h1,*/ h2, h3, p, ol, ul, li, a, label {
   color: white;
   font-family: monospace;
 }
-
+/*
 h1 {
   font-size: 27px;
   font-weight: 800;
   background-color: teal;
   padding: 20px;
 }
+*/
 
 h2 {
   font-size: 23px;
@@ -23,15 +24,14 @@ h3 {
 }
 
 #main {
-  width: 900px;
+  width: 1080px;
   margin: auto;
   padding: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   background-color: rgba(0,0,0,.5);
 }
 
 #header {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: auto;
   background-color: rgba(255,255,255,.9);
 }
 
@@ -53,6 +53,10 @@ h3 {
 
 .text {
   font-size: 17px;
+  line-height: 30px;
+}
+
+.lineh {
   line-height: 30px;
 }
 
@@ -84,6 +88,86 @@ h3 {
   background-color: gray;
 }
 
-.body {
-  background-color: rgba(0, 0, 0, .1);
+.soft {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+/* FOR ANIMATIONS */
+
+div.animated {
+  height: 40px;
+  width: 30%;
+  margin: 50px auto;
+}
+
+.top {
+  position: relative;
+  top: 9px;
+}
+
+#rectangle {
+  animation-name: rectangle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 7px;
+  height: 50px;
+}
+
+@keyframes rectangle {
+  0% {
+    background-color: blue;
+    color: white;
+  }
+  50% {
+    background-color: green;
+    color: purple;
+  }
+  100% {
+    background-color: yellow;
+    color: black;
+  }
+}
+
+#circle {
+  animation-name: circle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  height: 180px;
+  padding-top: 100px;
+}
+
+@keyframes circle {
+  0% {
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+  }
+  50% {
+    color: purple;
+    background-color: gray;
+    border: 1px solid blue;
+  }
+  100% {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+  }
+}
+
+#button1 {
+  height: 40px;
+  width: 100px;
+  background-color: blue;
+  color: black;
+  border-radius: 10px;
+}
+
+#button1:hover {
+  transform: scale(1.6);
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
